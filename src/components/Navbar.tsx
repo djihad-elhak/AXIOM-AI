@@ -52,11 +52,11 @@ const Navbar = () => {
             e.preventDefault();
             scrollToTop();
           }}
-          aria-label="Pulse Robot"
+          aria-label="AXIOM AI"
         >
           <img 
             src="/logo.svg" 
-            alt="Pulse Robot Logo" 
+            alt="AXIOM AI Logo" 
             className="h-7 sm:h-8" 
           />
         </a>
@@ -73,8 +73,9 @@ const Navbar = () => {
           >
             Home
           </a>
-          <a href="#features" className="nav-link">About</a>
-          <a href="#details" className="nav-link">Contact</a>
+          <a href="#marketplace" className="nav-link">Marketplace</a>
+          <a href="#features" className="nav-link">Features</a>
+          <a href="#pricing" className="nav-link">Pricing</a>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -106,6 +107,16 @@ const Navbar = () => {
             Home
           </a>
           <a 
+            href="#marketplace" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Marketplace
+          </a>
+          <a 
             href="#features" 
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
             onClick={() => {
@@ -113,17 +124,17 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            About
+            Features
           </a>
           <a 
-            href="#details" 
+            href="#pricing" 
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
             }}
           >
-            Contact
+            Pricing
           </a>
         </nav>
       </div>
